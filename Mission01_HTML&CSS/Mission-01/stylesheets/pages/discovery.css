@@ -1,0 +1,177 @@
+/* CSS 작성 */
+#wrap {
+  width: 1020px;
+  height: auto;
+  margin: 0 auto;
+  padding: 100px 0px;
+}
+
+/* ---------- header CSS start ---------- */
+header {
+  width: 1020px;
+  height: 40px;
+  margin: 0 auto 48px;
+}
+
+.logo {
+  width: 176px;
+  height: 40px;
+}
+
+.logo img {
+  width: 176px;
+  height: 40px;
+}
+
+/* ---------- header CSS end ---------- */
+
+/* ---------- section CSS start ---------- */
+section {
+  width: 1020px;
+  height: 1021px;
+  margin: 0 auto;
+}
+
+/* title */
+.title-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.title {
+  color: var(--color-black);
+  font-size: 24px;
+  font-weight: normal;
+  text-shadow: 0 4px 4px var(--color-opacity-25);
+}
+
+.divider {
+  color: var(--color-gray-600);
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0 10px;
+  /* 스크린 리더에는 읽히지 않도록 숨김 */
+  clip: rect(0, 0, 0, 0);
+}
+
+.subtitle {
+  color: var(--color-gray-600);
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* product */
+.product-wrap {
+  width: 100%;
+  height: 962px;
+}
+
+/* a 태그 - .product-img */
+.product-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  float: left;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  border: 1px solid var(--color-gray-500);
+}
+
+.mr-0 {
+  margin-right: 0px;
+}
+
+/* 이미지 호버 시 보더 색상과 커서 모양 변경 */
+.product-img:hover {
+  border-color: var(--color-blue-600);
+  cursor: pointer;
+}
+
+/* 이미지 포커스 시 보더 색상 변경 */
+.product-img:focus {
+  border-color: var(--color-blue-600);
+}
+
+/* 이미지 포커스 시 아웃라인 0 */
+.product-img:focus {
+  outline: 0;
+}
+
+/* span 태그 버튼 - .product-btn */
+.product-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 42px;
+  height: 42px;
+  font-size: 12px;
+  background-color: var(--color-opacity-20);
+  color: var(--color-gray-100);
+  transition: background-color 0.3s;
+}
+
+/*
+---- transition 적용되기 위한 코드 ----
+이미지 호버 시 버튼 색상과 너비 변경,
+이미지 포커스 시 버튼 색상과 너비 변경
+*/
+.product-img:hover .product-btn,
+.product-img:focus .product-btn {
+  background-color: var(--color-blue-600);
+  width: 112px;
+}
+
+/* 버튼 가상요소 */
+.product-btn::after {
+  content: "\f054";
+  font-family: 'fontawesome';
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+이미지 호버 시 - 버튼 가상요소 변경,
+이미지 포커스 시 - 버튼 가상요소 변경
+*/
+.product-img:hover .product-btn::after,
+.product-img:focus .product-btn::after {
+  content: "구매하기 \f054";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 112px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* img - large size */
+.lg {
+  width: 502px;
+  height: 310px;
+}
+
+.lg img {
+  padding: 20px 28px;
+}
+
+/* img - small size */
+.sm {
+  width: 243px;
+  height: 310px;
+}
+
+.sm img {
+  padding: 14px 22px 14px 21px;
+}
+
+/* ---------- section CSS end ---------- */
