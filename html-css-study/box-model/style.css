@@ -1,0 +1,20 @@
+* {
+  margin: 20px;
+}
+
+.box1, .box2 {
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+  background-color: cornsilk;
+  border: 10px solid sandybrown;
+  border-style: dashed;
+}
+
+.box1 {
+  box-sizing: border-box;
+}
+
+.box2 {
+  box-sizing: content-box;
+}

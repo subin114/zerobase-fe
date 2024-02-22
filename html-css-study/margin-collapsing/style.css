@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 1rem 1rem 4rem 1rem;
+  border: 4px solid #333;
+}
+
+.child_01, .child_02 {
+  background-color: crimson;
+}
+
+.child_01 {
+  margin-bottom: 5rem;
+}
+
+.child_02 {
+  margin-top: 5rem;
+}
+
+.solve {
+  background-color: yellowgreen;
+}
+
+span {
+  background-color: gold;
+}
