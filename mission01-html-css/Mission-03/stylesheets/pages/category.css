@@ -1,0 +1,337 @@
+/* 카테고리별 추천 광고상품 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrap {
+  width: 1020px;
+  height: auto;
+  margin: 0 auto;
+  padding: 100px 0px;
+}
+
+/* ---------- header CSS start ---------- */
+header {
+  width: 1020px;
+  height: 56px;
+  margin: 0 auto 48px;
+}
+
+header > a {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  width: 246px;
+  height: 56px;
+  margin: 0;
+}
+
+.logo img {
+  width: 246px;
+  height: 56px;
+}
+/* ---------- header CSS end ---------- */
+
+/* ---------- section CSS start ---------- */
+section {
+  width: 1020px;
+  height: 1362px;
+  margin: 0 auto;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+/* title */
+.title-wrap {
+  width: 1020px;
+  height: 46px;
+}
+
+.title-wrap h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-black);
+}
+
+.subtitle {
+  display: block;
+  font-size: 16px;
+  color: var(--color-black);
+}
+
+.txt-blue {
+  margin-left: 10px;
+  color: var(--color-blue-600);
+}
+
+/* article */
+article {
+  width: 100%;
+  height: 631px;
+  display: flex;
+}
+
+.border-brown300 {
+  border-top: 1px solid var(--color-brown-300);
+  border-bottom: 1px solid var(--color-brown-300);
+}
+
+.border-green700 {
+  border-top: 1px solid var(--color-green-700);
+  border-bottom: 1px solid var(--color-green-700);
+}
+
+/* article - left */
+.left {
+  width: 174px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.txt-brown300 {
+  color: var(--color-brown-300);
+}
+
+.txt-green700 {
+  color: var(--color-green-700);
+}
+
+.article-title {
+  width: calc(100% - 48px);
+  height: 55px;
+  margin-top: 48px;
+}
+
+.article-title > h3 {
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+.article-title > span {
+  display: inline-block;
+  width: 62px;
+  height: 17px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--color-gray-700);
+}
+
+.arrow {
+  display: inline-block;
+  width: 6px;
+  height: 10px;
+  margin-left: 4px;
+  background: url("../../assets/icon/angle-right-default.svg") no-repeat;
+}
+
+/* keyword */
+.keyword {
+  width: calc(100% - 48px);
+  height: 257px;
+  margin-bottom: 28px;
+}
+
+.keyword-title {
+  display: block;
+  width: 92px;
+  height: 21px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* hashtag */
+.hashtag {
+  width: 100%;
+  height: 216px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hashtag li a {
+  display: inline-block;
+  border: 1px solid var(--color-gray-400);
+  font-size: 12px;
+  padding: 6px 10px;
+  width: auto;
+  height: auto;
+}
+
+/* article - center */
+.center {
+  width: 320px;
+  height: 100%;
+  position: relative;
+}
+
+/* carousel */
+.carousel {
+  width: 320px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel ul {
+  width: 640px;
+  height: 100%;
+}
+
+.carousel li {
+  width: 320px;
+  height: 100%;
+  float: left;
+}
+
+/* banner */
+.banner {
+  position: absolute;
+  left: 30px;
+  bottom: 58px;
+  width: 260px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner span {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-white);
+}
+
+.banner p {
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--color-white);
+  margin-top: 8px;
+}
+
+.bg-brown300 {
+  background-color: var(--color-brown-300);
+}
+
+.bg-green700 {
+  background-color: var(--color-green-700);
+}
+
+/* indicator */
+.indicator {
+  position: absolute;
+  bottom: 22px;
+  left: 144px;
+  width: 32px;
+  height: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.indicator li {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-gray-700);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicator li:nth-of-type(2) {
+  background-color: var(--color-gray-600);
+}
+
+/* article - right */
+.right {
+  width: calc(100% - calc(174px + 320px));
+  height: 100%;
+}
+
+.right-top, .right-bottom {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-bottom {
+  position: relative;
+}
+
+.right-bottom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-gray-600);
+}
+
+/* card */
+.card {
+  display: block;
+  width: 160px;
+  height: 300px;
+  margin-left: 16px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--color-black);
+  margin: 12px 0px;
+}
+
+.discount {
+  font-size: 14px;
+  color: var(--color-red-500);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: 12px;
+  color: var(--color-black);
+}
+
+.price strong {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 시각적으로 숨겨진 텍스트를 화면 밖으로 이동시켜줌 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+/* ---------- section CSS end ---------- */

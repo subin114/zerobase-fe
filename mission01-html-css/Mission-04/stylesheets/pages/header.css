@@ -1,0 +1,403 @@
+/* 헤더 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrap {
+  width: 100%;
+  height: 150px;
+  margin: 0 auto;
+}
+
+/* ---------- loginbar CSS start ---------- */
+.loginbar-wrap {
+  width: 100%;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-gray-100);
+}
+
+.loginbar {
+  width: 1020px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+}
+
+.loginbar li {
+  margin: 0 8px;
+  font-size: 12px;
+  color: var(--color-black);
+}
+
+.loginbar li:nth-child(1) {
+  order: 1;
+  margin-left: auto;
+}
+
+.loginbar li:nth-child(2) {
+  order: 2;
+}
+
+.loginbar li:nth-child(3) {
+  order: 3;
+}
+
+/* ---------- loginbar CSS end ---------- */
+
+/* ---------- header CSS start ---------- */
+header {
+  width: 100%;
+  height: 116px;
+  border: 1px solid var(--color-gray-100);
+}
+
+.header-wrap {
+  width: 1020px;
+  height: 116px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 110px 176px 516px 98px;
+  grid-template-rows: 84px 1fr;
+  grid-template-areas:
+    "category logo searchbar icons"
+    "category nav nav icons";
+  gap: 0 40px;
+}
+
+/* category */
+.button--category {
+  grid-area: category;
+  width: 100%;
+  height: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: var(--color-blue-600);
+}
+
+.hamburger {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url("../../assets/icon/hamburger.svg") no-repeat;
+}
+
+.category-txt {
+  font-size: 12px;
+  color: var(--color-white);
+  margin-top: 12px;
+}
+
+/* logo */
+.logo {
+  display: block;
+  margin: 34px 0 10px;
+  background: url("../../assets/logo/logo.svg") center/cover no-repeat;
+  grid-area: logo;
+  cursor: pointer;
+}
+
+.logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* searchbar */
+.searchbar {
+  margin: 34px 0 10px;
+  grid-area: searchbar;
+  border: 1px solid var(--color-blue-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.select-wrap {
+  display: flex;
+  width: 135px;
+  height: 40px;
+  position: relative;
+}
+
+.select-wrap select {
+  position: relative;
+  z-index: 3;
+  width: 135px;
+  height: 40px;
+  padding: 0 12px;
+  font-size: 12px;
+  color: var(--color-gray-700);
+  border: transparent;
+  border-right: 1px solid var(--color-gray-100);
+  cursor: pointer;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none; /* 화살표 없애기 공통 */
+}
+
+.dropdown {
+  display: block;
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+}
+
+.searchbar input {
+  width: 301px;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 12px;
+  border: none;
+}
+
+.searchbar select,
+.searchbar input {
+  background-color: transparent;
+}
+
+.searchbar select:focus,
+.searchbar input:focus {
+  outline: 0;
+}
+
+.searchbar input::placeholder {
+  font-size: 12px;
+  color: var(--color-gray-600);
+}
+
+.voice-btn,
+.keyword-btn {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: 0;
+}
+
+.voice-btn {
+  background: url("../../assets/icon/mic.svg") center no-repeat;
+}
+
+.keyword-btn {
+  background: url("../../assets/icon/search.svg") center no-repeat;
+}
+
+/* icons */
+.icons {
+  grid-area: icons;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -5px;
+}
+
+/* myCoupang btn */
+.myCoupang {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.myCoupang button {
+  width: 100%;
+  height: 48px;
+  font-size: 12px;
+  border: 0;
+  color: var(--color-black);
+  background: url("../../assets/icon/my-coupang.svg") top no-repeat;
+  background-size: 28px;
+  padding-top: 30px;
+  cursor: pointer;
+}
+
+.myCoupang ul {
+  position: absolute;
+  top: 92px;
+  left: -23px;
+  width: 90px;
+  height: 130px;
+  border: 1px solid var(--color-gray-300);
+  background-color: var(--color-white);
+  display: none;
+}
+
+.myCoupang ul::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 40px;
+  border-style: solid;
+  border-width: 0 5px 7px 5px;
+  border-color: var(--color-white) transparent;
+  z-index: 1;
+}
+
+.myCoupang ul::before {
+  content: '';
+  position: absolute;
+  top: -7.5px;
+  left: 40px;
+  border-style: solid;
+  border-width: 0 5px 7px 5px;
+  border-color: var(--color-gray-300) transparent;
+  z-index: 0;
+}
+
+.myCoupang ul li {
+  width: auto;
+  padding: 21px 10px;
+  font-size: 12px;
+  text-align: center;
+  color: var(--color-black);
+}
+
+.myCoupang ul li:nth-last-of-type(2n) {
+  padding: 0px 10px;
+}
+
+.myCoupang.is--active ul {
+  display: block;
+}
+
+/* cart btn */
+.cart {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cart button {
+  width: 100%;
+  height: 48px;
+  font-size: 12px;
+  border: 0;
+  color: var(--color-black);
+  background: url("../../assets/icon/cart.svg") top no-repeat;
+  background-size: 28px;
+  padding-top: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.cart button::after {
+  content: '0';
+  position: absolute;
+  top: -6px;
+  right: 3px;
+  background-color: var(--color-blue-600);
+  color: var(--color-white);
+  border-radius: 20px;
+  padding: 2px 5.5px;
+}
+
+.cart-bubble {
+  position: absolute;
+  top: 92px;
+  right: 9px;
+  width: 288px;
+  height: 90px;
+  border: 1px solid var(--color-gray-300);
+  background-color: var(--color-white);
+  display: none;
+}
+
+.cart-bubble span {
+  font-size: 14px;
+  color: var(--color-black);
+  display: block;
+  text-align: center;
+  padding: 35px 0px;
+}
+
+.cart-bubble::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 9px;
+  border-style: solid;
+  border-width: 0 5px 7px 5px;
+  border-color: var(--color-white) transparent;
+  z-index: 1;
+}
+
+.cart-bubble::before {
+  content: '';
+  position: absolute;
+  top: -7.5px;
+  right: 9px;
+  border-style: solid;
+  border-width: 0 5px 7px 5px;
+  border-color: var(--color-gray-300) transparent;
+  z-index: 0;
+}
+
+.cart.cart--empty .cart-bubble {
+  display: block;
+}
+
+/* nav */
+nav {
+  margin-bottom: 6px;
+  grid-area: nav;
+}
+
+nav ul {
+  width: auto;
+  height: 26px;
+  font-size: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  width: auto;
+  height: 26px;
+  font-size: 12px;
+  color: var(--color-black);
+  padding: 6px 14px;
+}
+
+.mr-4 {
+  margin-right: 2px;
+  margin-bottom: 3px;
+}
+
+.ml-4 {
+  margin-left: 2px;
+  margin-bottom: 4px;
+}
+
+/* ---------- header CSS end ---------- */
