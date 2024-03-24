@@ -9,7 +9,17 @@ const Counter = () => {
 
   return (
     <div>
-      <button onClick={() => setCount(count + 1)}>{operator}1</button>
+      <button
+        onClick={() => {
+          let result;
+          if (operator === "+") result = count + 1;
+          if (operator === "-") result = count - 1;
+          if (operator === "*") result = count * 1;
+          setCount(result);
+        }}
+      >
+        {operator}1
+      </button>
       <button onClick={() => setShow(!show)}>Show and Hide</button>
       <button
         onClick={() => {
