@@ -1,10 +1,12 @@
 import "./App.scss";
-import Clock from "./components/Clock";
+// import FunctionClock from "./components/ClassClock";
+import FunctionClock from "./components/FunctionClock";
 
 function App() {
   return (
     <div className="App">
-      <Clock />
+      {/* <ClassClock /> */}
+      <FunctionClock />
     </div>
   );
 }
