@@ -35,7 +35,7 @@ function answer(dwarf) {
   }
 
   // 3. faker 2명을 제외하고 나머지 배지 값을 result에 넣어줌
-  let count = 0;
+  // let count = 0;
   for (let i = 0; i < dwarf.length; i++) {
     if (faker[0] != i && faker[1] != i) {
       result.push(dwarf[i]);
