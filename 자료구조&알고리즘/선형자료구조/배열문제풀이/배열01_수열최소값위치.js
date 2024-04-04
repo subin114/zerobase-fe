@@ -17,7 +17,7 @@ function answer(nums) {
 
   // 2. 최소값에 해당하는 index
   for (let i = 0; i < nums.length; i++) {
-    if (min == nums[i]) {
+    if (min === nums[i]) {
       result.push(i);
     }
   }

@@ -19,7 +19,8 @@ function answer(chess) {
   let count = 0;
 
   for (let i = 0; i < chess.length; i++) {
-    result[count++] = refer[i] - chess[i];
+    result.push(refer[i] - chess[i]);
+    // result[count++] = refer[i] - chess[i];
   }
 
   return result;

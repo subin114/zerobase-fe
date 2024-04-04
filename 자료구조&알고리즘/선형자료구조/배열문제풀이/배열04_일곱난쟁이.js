@@ -24,7 +24,7 @@ function answer(dwarf) {
   let faker = [];
   for (let i = 0; i < dwarf.length; i++) {
     for (let j = i + 1; j < dwarf.length; j++) {
-      if (sum == dwarf[i] + dwarf[j]) {
+      if (sum === dwarf[i] + dwarf[j]) {
         faker[0] = i;
         faker[1] = j;
         break;
@@ -38,7 +38,8 @@ function answer(dwarf) {
   let count = 0;
   for (let i = 0; i < dwarf.length; i++) {
     if (faker[0] != i && faker[1] != i) {
-      result[count++] = dwarf[i];
+      result.push(dwarf[i]);
+      // result[count++] = dwarf[i];
     }
   }
 
