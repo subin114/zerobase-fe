@@ -5,7 +5,7 @@
 기물의 개수는 배열 형태로 아래와 같이 king부터 pawns 순으로 들어오며
 한 게임을 하기 위해 필요한 기물의 개수는 아래와 같다.
 
-※ 순서 및 기물 필요 개수 : king(1), queen(1), rooks(1), bishops(2), knights(2), pawns(8)
+※ 순서 및 기물 필요 개수 : king(1), queen(1), rooks(2), bishops(2), knights(2), pawns(8)
 */
 
 /* user code */
