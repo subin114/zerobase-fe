@@ -5,9 +5,7 @@
 num1를 num2로 나눈 나머지를 return 하도록 solution 함수를 완성해주세요.
 */
 
-const solution = (num1, num2) => {
-  return num1 % num2;
-};
+const solution = (num1, num2) => num1 % num2;
 
 console.log(solution(3, 2)); // 1
 console.log(solution(10, 5)); // 0

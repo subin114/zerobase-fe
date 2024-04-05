@@ -11,9 +11,7 @@
 단, a ⊕ b와 2 * a * b가 같으면 a ⊕ b를 return 합니다.
 */
 
-const solution = (a, b) => {
-  return Math.max(Number(`${a}${b}`), 2 * a * b);
-};
+const solution = (a, b) => Math.max(Number(`${a}${b}`), 2 * a * b);
 
 console.log(solution(2, 91)); // 364
 console.log(solution(91, 2)); // 912

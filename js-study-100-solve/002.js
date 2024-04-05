@@ -5,9 +5,7 @@
 num1을 num2로 나눈 몫을 return 하도록 solution 함수를 완성해주세요.
 */
 
-const solution = (num1, num2) => {
-  return Math.floor(num1 / num2);
-};
+const solution = (num1, num2) => Math.trunc(num1 / num2);
 
 console.log(solution(10, 5)); // 2
 console.log(solution(7, 2)); // 3
