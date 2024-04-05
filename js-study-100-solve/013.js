@@ -5,16 +5,12 @@
 */
 
 const printMultiplicationTable = () => {
-  let res = "";
-
   for (let i = 2; i <= 9; i++) {
-    res += `=== ${i}단 ===\n`;
+    console.log(`=== ${i}단 ===`);
     for (let j = 1; j <= 9; j++) {
-      res += `${i} * ${j} = ${i * j}\n`;
+      console.log(`${i} * ${j} = ${i * j}`);
     }
   }
-
-  return res;
 };
 
-console.log(printMultiplicationTable());
+printMultiplicationTable();
