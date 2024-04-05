@@ -5,8 +5,11 @@
 */
 
 const swap = (arr, i, j) => {
-  [arr[j], arr[i]] = [arr[i], arr[j]]; // [3, 2] = [2, 3]
-  return arr;
+  arr.with(i, arr[j]).with(j, arr[i]);
+
+  // const copy = [...arr];
+  // [copy[j], copy[i]] = [arr[i], arr[j]];
+  // return copy;
 };
 
 const arr = [1, 2, 3, 4];
