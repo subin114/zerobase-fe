@@ -6,7 +6,10 @@
 머쓱이가 최대로 마실 수 있는 아메리카노의 잔 수와 남는 돈을 순서대로 담은 배열을 return 하도록 solution 함수를 완성해보세요.
 */
 
-const solution = (money) => [Math.floor(money / 5500), money % 5500];
+const solution = (money) => {
+  const coffeePrice = 5500;
+  [Math.trunc(money / coffeePrice), money % coffeePrice];
+};
 
 console.log(solution(5500)); // [1, 0]
 console.log(solution(15000)); // [2, 4000]
