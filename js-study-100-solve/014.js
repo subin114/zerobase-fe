@@ -10,33 +10,25 @@
  *****
 */
 
+// O(n^2)
 const star1 = (n) => {
-  let res = "";
-
   for (let i = 1; i <= n; i++) {
-    res += "*".repeat(i);
-
-    if (i !== n) res += "\n";
+    console.log("*".repeat(i));
   }
-
-  return res;
 };
 
 /*
-[다른 풀이]
+// 1 + n + n = 2n + 1 (= O(2n + 1))
+// 즉, 아래의 함수 복잡도는 O(n)
 
 const star1 = (n) => {
   let res = "";
 
-  for (let i = 1; i <= n; i++) {
-    for (let j = 1; j <= i; j++) {
+  for (let i = 0; i < n; i++) {
       res += "*";
-    }
-    res += "\n";
+      console.log(res)
   }
-
-  return res;
 }
 */
 
-console.log(star1(5));
+star1(5);
