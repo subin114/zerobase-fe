@@ -8,5 +8,14 @@
   },
   "rules": {
     "arrow-body-style": ["error", "as-needed"],
+    "no-console": "off",
   },
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "rules": {
+        "no-undef": "off",
+      },
+    },
+  ],
 }
