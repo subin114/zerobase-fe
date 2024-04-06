@@ -11,7 +11,7 @@
 단, a ⊕ b와 b ⊕ a가 같다면 a ⊕ b를 return 합니다.
 */
 
-const solution = (a, b) => Math.max(Number(`${a}${b}`), Number(`${b}${a}`));
+const solution = (a, b) => Math.max(Number(`${a}${b}`), Number(`${b}${a}`))
 
-console.log(solution(9, 91)); // 991
-console.log(solution(89, 8)); // 898
+console.log(solution(9, 91)) // 991
+console.log(solution(89, 8)) // 898

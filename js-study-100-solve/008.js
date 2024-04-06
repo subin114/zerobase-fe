@@ -5,12 +5,12 @@
 */
 
 const swap = (arr, i, j) => {
-  arr.with(i, arr[j]).with(j, arr[i]);
+  arr.with(i, arr[j]).with(j, arr[i])
 
   // const copy = [...arr];
   // [copy[j], copy[i]] = [arr[i], arr[j]];
   // return copy;
-};
+}
 
-const arr = [1, 2, 3, 4];
-console.log(swap(arr, 1, 2)); // [1, 3, 2, 4]
+const arr = [1, 2, 3, 4]
+console.log(swap(arr, 1, 2)) // [1, 3, 2, 4]

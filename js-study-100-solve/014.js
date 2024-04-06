@@ -11,11 +11,11 @@
 */
 
 // O(n^2)
-const star1 = (n) => {
+const star1 = n => {
   for (let i = 1; i <= n; i++) {
-    console.log("*".repeat(i));
+    '*'.repeat(i)
   }
-};
+}
 
 /*
 // 1 + n + n = 2n + 1 (= O(2n + 1))
@@ -31,4 +31,4 @@ const star1 = (n) => {
 }
 */
 
-star1(5);
+star1(5)

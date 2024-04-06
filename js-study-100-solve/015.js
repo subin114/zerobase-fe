@@ -10,17 +10,17 @@
  *
 */
 
-const star2 = (n) => {
-  let res = "";
+const star2 = n => {
+  let res = ''
 
   for (let i = n; i >= 1; i--) {
-    res += "*".repeat(i);
+    res += '*'.repeat(i)
 
-    if (i !== 1) res += "\n";
+    if (i !== 1) res += '\n'
   }
 
-  return res;
-};
+  return res
+}
 
 /*
 [다른 풀이]
@@ -39,4 +39,4 @@ const star2 = (n) => {
 };
 */
 
-console.log(star2(5));
+console.log(star2(5))
