@@ -1,7 +1,5 @@
 // 03. extends
 
-/* */
-
 interface Animal1 {
   name: string;
   run(): string;
