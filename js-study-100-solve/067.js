@@ -7,10 +7,10 @@ str에서 인덱스 num1과 인덱스 num2에 해당하는 문자를 바꾼 문�
 */
 
 const solution = (str, num1, num2) => {
-  const arr = str.split('')
-  [arr[num1], arr[num2]] = [arr[num2], arr[num1]]
+  const arr = str.split('');
+    [arr[num1], arr[num2]] = [arr[num2], arr[num1]];
 
-  return arr.join('')
+    return arr.join('');
 }
 
 console.log(solution('hello', 1, 2)) // 'hlelo'
