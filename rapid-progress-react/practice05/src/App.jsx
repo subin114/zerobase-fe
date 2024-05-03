@@ -9,6 +9,14 @@ function App() {
   const [pickedCards, setPickedCards] = useState([]);
 
   const draw = () => {
+    // 조건 추가
+    if (pickedCards.length > 2) {
+      const names = pickedCards.reduce((acc, cur) => {
+        return (acc = acc.concat(`${cur.name}, `));
+      }, "");
+      alert(`당첨자는 ${names} 입니다.`);
+      return;
+    }
     // 추첨하기 버튼을 누르면, 랜덤하게 하나의 명함을 고른다.
     const randomIdx = Math.floor(Math.random() * cards.length);
     const randomItem = cards[randomIdx];

@@ -1,5 +1,6 @@
 const BusinessCard = (props) => {
   console.log(props);
+  // eslint-disable-next-line react/prop-types
   const { company, team, name, phoneNumber, email } = props.info;
   return (
     <div>
