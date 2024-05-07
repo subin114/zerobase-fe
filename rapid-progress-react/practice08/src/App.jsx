@@ -2,12 +2,14 @@
 import "./App.scss";
 import SimpleForm from "./components/SimpleForm";
 import UnControlledForm from "./components/UnControlledForm";
+import CatParent from "./components/CatParent";
 
 function App() {
   return (
     <div>
       {/* <SimpleForm /> */}
-      <UnControlledForm />
+      {/* <UnControlledForm /> */}
+      <CatParent />
     </div>
   );
 }
