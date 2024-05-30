@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 const ReactPage = () => {
   const [docs, setDocs] = useState([]);
@@ -34,11 +35,13 @@ const ReactPage = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-      const result = await res.json(res);
-      // console.log(result);
-      // setDocs(result);
-      return result;
+      const result = await axios.get(
+        "https://jsonplaceholder.typicode.com/posts"
+      );
+      console.log(result);
+      console.log(result.data);
+
+      return result.data;
     }
 
     fetchData().then((res) => {
