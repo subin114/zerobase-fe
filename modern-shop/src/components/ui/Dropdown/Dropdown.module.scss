@@ -1,0 +1,11 @@
+@import "../../../scss/abstracts/mixins";
+
+.Dropdown {
+  @include txt-normal;
+
+  label,
+  div,
+  span {
+    @include txt-normal;
+  }
+}

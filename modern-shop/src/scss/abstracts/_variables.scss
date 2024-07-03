@@ -1,0 +1,39 @@
+:root {
+  // basic
+  --color-white: #fff;
+  --color-black: #121212;
+  --color-gray: #c8c8c8;
+  --color-light-gray: #eee;
+  --color-dark-gray: #888;
+  --color-point: #73aefa;
+  --color-badge: #9cc3e5;
+  --color-light-blue: #dbe2e8;
+  --color-dark-blue: #4f5562;
+  --color-warning: rgb(255, 87, 75);
+
+  // light
+  --color-primary-light: #ffffff;
+  --color-secondary-light: #121212;
+  --color-tertiary-light: #ebebeb;
+  --color-drag-light: #4647471f;
+
+  // dark
+  --color-primary-dark: #121212;
+  --color-secondary-dark: #ffffff;
+  --color-tertiary-dark: #b8b8b8;
+  --color-drag-dark: #c4c4c481;
+}
+
+body.light-mode {
+  --color-primary: var(--color-primary-light);
+  --color-secondary: var(--color-secondary-light);
+  --color-tertiary: var(--color-tertiary-light);
+  --color-drag: var(--color-drag-light);
+}
+
+body.dark-mode {
+  --color-primary: var(--color-primary-dark);
+  --color-secondary: var(--color-secondary-dark);
+  --color-tertiary: var(--color-tertiary-dark);
+  --color-drag: var(--color-drag-dark);
+}

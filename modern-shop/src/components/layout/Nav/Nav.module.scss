@@ -1,0 +1,234 @@
+@import "../../../scss/abstracts/variables";
+@import "../../../scss/abstracts/mixins";
+
+.Nav {
+  width: 100%;
+  height: auto;
+  @include txt-point;
+  position: relative;
+  margin-bottom: 90px;
+
+  .NavTop {
+    background-color: var(--color-light-blue);
+    width: 100%;
+    height: 25px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-black);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+  }
+
+  .NavBottom {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    position: fixed;
+    top: 25px;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--color-primary);
+    border-bottom: 1px solid var(--color-light-blue);
+
+    .menus {
+      flex: 1;
+
+      .menu {
+        margin-right: 25px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--color-secondary);
+      }
+    }
+
+    h1 {
+      flex: 1;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .icons {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .searchBar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .icon {
+        width: 25px;
+        margin-left: 15px;
+        cursor: pointer;
+      }
+
+      .badge {
+        span {
+          background-color: var(--color-badge);
+          color: var(--color-primary);
+          top: -6px;
+          right: 2px;
+          border: 1px solid var(--color-primary);
+        }
+      }
+
+      .mode {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  // mobile start
+  .NavBottomMobile {
+    display: none;
+    width: 100%;
+    height: 65px;
+    padding: 0 15px;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 25px;
+    left: 0;
+    z-index: 999;
+    background-color: var(--color-primary);
+    border-bottom: 1px solid var(--color-light-blue);
+
+    .menuIcon {
+      width: 42px;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    h1 {
+      flex: 1;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .mode {
+      width: auto;
+      padding: 0 !important;
+      margin-left: 0 !important;
+    }
+  }
+
+  .mobileMenu {
+    background-color: var(--color-light-blue);
+    width: 60%;
+    max-width: 400px;
+    height: 99%;
+    position: fixed;
+    top: 26px;
+    left: 0;
+    z-index: 1001;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    // transition: transform 0.3s ease;
+    // transform: translateX(-100%);
+
+    // &.open {
+    //   // transform: translateX(0);
+    // }
+
+    .closeIconWrap {
+      width: 100%;
+      height: 65px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 15px;
+
+      .closeIcon {
+        font-size: 25px;
+        cursor: pointer;
+        color: var(--color-dark-blue);
+      }
+    }
+
+    .menu {
+      border-bottom: 1px solid var(--color-white);
+      display: block;
+      padding: 13px 10px;
+      color: var(--color-dark-blue);
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0 20px;
+    }
+
+    .searchBarMobile {
+      width: 100%;
+      display: inline-block;
+      padding: 20px;
+      margin: 10px 0;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      padding: 0px 20px;
+
+      .icon {
+        width: 23px;
+        margin-left: 15px;
+        cursor: pointer;
+        color: var(--color-dark-blue);
+
+        &:nth-of-type(1) {
+          margin-left: 0;
+        }
+      }
+
+      .badge {
+        span {
+          background-color: var(--color-badge);
+          color: var(--color-primary);
+          top: -6px;
+          right: 2px;
+          border: 1px solid var(--color-primary);
+        }
+      }
+    }
+  }
+
+  .mobileOverlay {
+    position: fixed;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 25px);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+  }
+
+  .mobileOverlay.open {
+    display: block;
+  }
+}
+
+@media (max-width: 1199px) {
+  .NavBottom {
+    display: none !important;
+  }
+
+  .NavBottomMobile {
+    display: block !important;
+  }
+}

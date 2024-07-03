@@ -1,0 +1,13 @@
+@import "../../../scss/abstracts/variables";
+@import "../../../scss/abstracts/mixins";
+
+.CategoryProduct {
+  h2 {
+    @include title-h2;
+  }
+
+  .sectionGrid {
+    display: flex;
+    justify-content: center;
+  }
+}

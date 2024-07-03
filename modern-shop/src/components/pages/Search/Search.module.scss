@@ -1,0 +1,33 @@
+@import "../../../scss/abstracts/variables";
+@import "../../../scss/abstracts/mixins";
+
+.Search {
+  @include category-layout;
+  min-height: calc(100vh - 260px);
+  height: auto;
+  padding-bottom: 60px;
+
+  .sectionWrap {
+    .searchResult {
+      @include txt-normal;
+      width: 100%;
+      max-width: 1140px;
+      display: block;
+      margin: 40px auto 40px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--color-drag);
+
+      .productLength {
+        font-size: 15px;
+        color: var(--color-point);
+        font-weight: 600;
+        margin-right: 5px;
+      }
+    }
+
+    .sectionGrid {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

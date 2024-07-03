@@ -1,0 +1,43 @@
+@import "../../../scss/abstracts/mixins";
+
+.NotFound {
+  @include layout;
+  justify-content: center;
+  align-items: center;
+
+  strong {
+    font-size: 130px;
+    margin-top: -45px;
+  }
+
+  span {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: -0.2px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 479px) {
+  .NotFound {
+    width: 90%;
+
+    strong {
+      font-size: 80px;
+    }
+
+    span {
+      font-size: 17px;
+    }
+
+    p {
+      font-size: 13px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../../scss/abstracts/mixins";
+
+.Digital {
+  @include category-layout;
+
+  .categoryTopSection {
+    @include category-header-wrap;
+
+    span {
+      @include category-header;
+
+      h2 {
+        @include title-h2;
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .categoryTopSection {
+    span {
+      @include category-header-media;
+
+      h2 {
+        @include category-header-title-media;
+      }
+    }
+  }
+}
