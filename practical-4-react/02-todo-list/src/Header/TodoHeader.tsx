@@ -1,10 +1,10 @@
+import { useTodoState } from "../Todo/TodoProvider";
 import styles from "./TodoHeader.module.scss";
 
-interface TodoHeaderProps {
-  count: number;
-}
+const TodoHeader = () => {
+  const todoState = useTodoState();
+  const count = todoState.todos.filter((todo) => !todo.isChecked).length;
 
-const TodoHeader = ({ count }: TodoHeaderProps) => {
   return (
     <header>
       <h1 className={styles.headerTitle}>

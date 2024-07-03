@@ -1,22 +1,44 @@
 import { RiChatNewLine } from "react-icons/ri";
 import styles from "./TodoInput.module.scss";
 import { ChangeEvent, FormEvent } from "react";
+import {
+  useInputTodoDispatch,
+  useInputTodoState,
+  useTodoDispatch,
+} from "../Todo/TodoProvider";
 
-interface TodoInputProps {
-  text: string;
-  onTextChange: (text: string) => void;
-  onSubmit: () => void;
-}
+const TodoInput = () => {
+  const todoDispatch = useTodoDispatch();
+  const inputDispatch = useInputTodoDispatch();
+  const inputState = useInputTodoState();
+  // text={inputState.text}
+  // onTextChange={handleTextChange}
+  // onSubmit={handleSubmit}
 
-const TodoInput = ({ text, onTextChange, onSubmit }: TodoInputProps) => {
   const handleInputChanged = (e: ChangeEvent<HTMLInputElement>) => {
-    onTextChange(e.target.value);
+    inputDispatch({
+      type: "change",
+      payload: e.target.value,
+    });
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    onSubmit();
+    if (!inputState.text) {
+      return;
+    }
+
+    todoDispatch({
+      type: "add",
+      payload: {
+        text: inputState.text,
+      },
+    });
+
+    inputDispatch({
+      type: "clear",
+    });
   };
 
   return (
@@ -24,7 +46,7 @@ const TodoInput = ({ text, onTextChange, onSubmit }: TodoInputProps) => {
       <form onSubmit={handleSubmit}>
         <input
           placeholder="해야할 Todo"
-          value={text}
+          value={inputState.text}
           onChange={handleInputChanged}
         />
         <button type="submit">
