@@ -3,7 +3,6 @@ import { BrowserRouter } from "react-router-dom";
 import Router from "./router/router";
 import Nav from "./components/layout/Nav/Nav";
 import Footer from "./components/layout/Footer/Footer";
-import "./App.scss";
 import { useState, useMemo, createContext, useEffect } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import ScrollToTop from "./components/ScrollToTop";

@@ -1,7 +1,7 @@
 <h2>Modern Shop (React + TS Project)</h2>
 
 - <b>Project Name :</b> Modern Shop
-- <b>Website Link :</b> <a href="https://modern-shop-six.vercel.app" target="_blank">modern-shop-six.vercel.app</a>
+- <b>Website Link :</b> <a href="https://modern-shop-two.vercel.app" target="_blank">modern-shop-six.vercel.app</a>
 
 <br /><br />
 
@@ -32,21 +32,25 @@
 <h2>Technology Stack</h2>
 
 <b>Lagnuage</b>
+
 - TypeScript
 
 <br/>
 
 <b>Framework</b>
+
 - React 18
 
 <br/>
 
 <b>Build Tool</b>
+
 - Vite
 
 <br/>
 
 <b>UI Libraries + Styling</b>
+
 - MUI
 - FontAwesome
 - Sass
@@ -54,16 +58,19 @@
 <br/>
 
 <b>State Management</b>
+
 - Recoil
 
 <br/>
 
 <b>Routing</b>
+
 - react-router-dom
 
 <br/>
 
 <b>Other Libraries</b>
+
 - axios
 - clsx
 - swiper
