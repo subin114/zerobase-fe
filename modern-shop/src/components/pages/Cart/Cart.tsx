@@ -149,7 +149,7 @@ const Cart = () => {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
               >
-                <Box sx={style}>
+                <Box sx={style} className={styles.modalBox}>
                   <Typography
                     id="modal-modal-title"
                     variant="h6"
