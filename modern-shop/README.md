@@ -1,7 +1,7 @@
 <h2>Modern Shop (React + TS Project)</h2>
 
 - <b>Project Name :</b> Modern Shop
-- <b>Website Link :</b> <a href="https://modern-shop-two.vercel.app" target="_blank">modern-shop-six.vercel.app</a>
+- <b>Website Link :</b> <a href="https://modern-shop-two.vercel.app" target="_blank">modern-shop-two.vercel.app</a>
 
 <br /><br />
 
