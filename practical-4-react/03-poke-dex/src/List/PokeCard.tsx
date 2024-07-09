@@ -2,24 +2,59 @@ import styled from "@emotion/styled";
 import PokeNameChip from "../Common/PokeNameChip";
 import PokeMarkChip from "./../Common/PokeMarkChip";
 import { useNavigate } from "react-router";
+import { useEffect, useState } from "react";
+import {
+  fetchPokemonDetail,
+  PokemonDetailType,
+} from "../Service/pokemonService";
+import { PokeImageSkeleton } from "../Common/PokeImageSkeletion";
 
-const TempimgUrl =
-  "https://mblogthumb-phinf.pstatic.net/20160817_259/retspe_14714118890125sC2j_PNG/%C7%C7%C4%AB%C3%F2_%281%29.png?type=w800";
+interface PokeCardProps {
+  name: string;
+}
 
-const PokeCard = () => {
+const PokeCard = ({ name }: PokeCardProps) => {
   const navigate = useNavigate();
+  const [pokemon, setPokemon] = useState<PokemonDetailType | null>(null);
 
   const handleClick = () => {
-    navigate(`/pokemon/피카츄`);
+    navigate(`/pokemon/${name}`);
   };
 
+  useEffect(() => {
+    (async () => {
+      const detail = await fetchPokemonDetail(name);
+      setPokemon(detail);
+    })();
+  }, [name]);
+
+  if (!pokemon) {
+    return (
+      <Item color={"#fff"}>
+        <Header>
+          <PokeNameChip name={"포켓몬"} color={"#ffca09"} id={0} />
+        </Header>
+        <Body>
+          <PokeImageSkeleton />
+        </Body>
+        <Footer>
+          <PokeMarkChip />
+        </Footer>
+      </Item>
+    );
+  }
+
   return (
-    <Item onClick={handleClick}>
+    <Item onClick={handleClick} color={pokemon.color}>
       <Header>
-        <PokeNameChip />
+        <PokeNameChip
+          name={pokemon.koreanName}
+          color={pokemon.color}
+          id={pokemon.id}
+        />
       </Header>
       <Body>
-        <Image src={TempimgUrl} alt="피카츄" />
+        <Image src={pokemon.images.dreamWorldFront} alt={pokemon.name} />
       </Body>
       <Footer>
         <PokeMarkChip />
@@ -28,7 +63,7 @@ const PokeCard = () => {
   );
 };
 
-const Item = styled.li`
+const Item = styled.li<{ color: string }>`
   display: flex;
   flex-direction: column;
   padding: 8px;
@@ -44,7 +79,7 @@ const Item = styled.li`
   }
 
   &:active {
-    background-color: yellow;
+    background-color: ${({ color }) => color};
     opacity: 0.8;
     transition: background-color 0s;
   }

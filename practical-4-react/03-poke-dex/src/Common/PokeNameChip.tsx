@@ -1,12 +1,35 @@
 import styled from "@emotion/styled";
 
-const PokeNameChip = () => {
+interface PokeNameChipProps {
+  name: string;
+  id: number;
+  color: string;
+}
+
+const PokeNameChip = ({ name, id, color }: PokeNameChipProps) => {
+  const renderNumber = (id: number) => {
+    const digits = 3;
+    const numberString = id.toString();
+
+    if (numberString.length >= digits) {
+      return numberString;
+    }
+
+    let result = "";
+
+    for (let i = 0; i < digits - numberString.length; i++) {
+      result += "0";
+    }
+
+    return `${result}${numberString}`;
+  };
+
   return (
     <Chip>
-      <NumberChip>
-        <Number>001</Number>
+      <NumberChip color={color}>
+        <Number>{renderNumber(id)}</Number>
       </NumberChip>
-      <Text>이상해씨</Text>
+      <Text>{name}</Text>
     </Chip>
   );
 };
@@ -21,9 +44,9 @@ const Chip = styled.div`
   box-shadow: 0.5px 0.5px 0 0 #eee;
 `;
 
-const NumberChip = styled.div`
+const NumberChip = styled.div<{ color: string }>`
   padding: 4px 6px;
-  background-color: orange;
+  background-color: ${({ color }) => color};
   border-radius: 16px;
   opacity: 0.8px;
 `;
